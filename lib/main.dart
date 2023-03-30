@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         body: Padding(
           padding: const EdgeInsets.all(20),
-          child: Column(
+          child: ListView(
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -46,7 +46,6 @@ class _HomePageState extends State<HomePage> {
                       Text('  Search',style: TextStyle(fontSize: 25),),
                     ],
                   ),
-                prefix:Icon(Icons.search) ,
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(40)
                     )
