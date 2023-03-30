@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import '../main.dart';
-class TregindPage extends StatefulWidget {
-  const TregindPage({super.key});
+
+import '../../main.dart';
+class latestPage extends StatefulWidget {
+  const latestPage({super.key});
 
   @override
-  State<TregindPage> createState() => _TregindPageState();
+  State<latestPage> createState() => _latestPageState();
 }
 
-class _TregindPageState extends State<TregindPage> {
+class _latestPageState extends State<latestPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(

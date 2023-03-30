@@ -2,13 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:watch_product/main.dart';
 
 class FirstPage extends StatefulWidget {
-  const FirstPage({super.key});
+  final String path;
+  final String txt;
+  const FirstPage(this.path,this.txt,{super.key});
 
   @override
   State<FirstPage> createState() => _FirstPageState();
 }
 
 class _FirstPageState extends State<FirstPage> {
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -17,12 +20,11 @@ class _FirstPageState extends State<FirstPage> {
            alignment: Alignment.center,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('images/one.png'),
+              image: AssetImage(widget.path),
               fit: BoxFit.fill
               ),
-              
           ),
-          child: Column(
+          child: ListView(
             children: [
               Row(
                 children: [
@@ -39,9 +41,7 @@ class _FirstPageState extends State<FirstPage> {
                 ],
               ),
      ListTile(
-                  title: Text("""You're not Lazy, Bored unmotived
-                  The verb κοσμεῖν (κοσμεῖν) meant generally "to dispose, prepare", but especially "to order and arrange (troops for battle), to set (an army) in array"; also "to establish (a government or regime)", "to adorn, dress" (especially of women). Thus kosmos meant "ornaments, decoration" (compare kosmokomes "dressing the hair," and cosmetic).[2] The philosopher Pythagoras used the term kosmos (Ancient Greek: κόσμος, Latinized kósmos) for the order of the universe.[3] Anaxagoras further introduced the concept of a Cosmic Mind (Nous) ordering all things.[4] The modern Greek κόσμος "order, good order, orderly arrangement" is a word with several main senses rooted in those notions. κόσμος has developed, along with primary "the universe, the world", the meaning of "people" (collectively).
-                  """,style: TextStyle(color: Colors.white,fontSize: 20),),
+                  title: Text(widget.txt,style: TextStyle(color: Colors.white,fontSize: 20),),
                 ),
 
             ],
